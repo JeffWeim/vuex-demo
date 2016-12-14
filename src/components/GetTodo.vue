@@ -1,7 +1,7 @@
 <template>
   <div id="get-todo" class="container">
     <input class="form-control" :value="newTodo" @change="getTodo" placeholder="I need to...">
-    <button class="btn btn-primary" @click.prevent="addTodo">Add Todo</button>
+    <button class="btn btn-primary" @click.prevent="addTodo"> Add Todo </button>
   </div>  
 </template>
 
@@ -20,10 +20,18 @@
       newTodo() {
         return this.$store.getters.newTodo
       }
-    },
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  
+  #get-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn-primary {
+      text-align: center;
+    }
+  }
 </style>

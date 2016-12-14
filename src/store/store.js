@@ -6,13 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   // initial app store data
   state: {
-    todos: 
-      [
-        {
-          body: 'Don\'t be lazy, complete me!',
-          completed: false
-        }
-      ],
+    todos: [],
     newTodo: '',
     message: 'Vue App using Vuex'
   },
@@ -44,6 +38,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    // these are using destructuring
     getTodo({commit}, todo) {
       commit('GET_TODO', todo)
     },

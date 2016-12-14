@@ -1,7 +1,7 @@
 
 <template>
   <div id="app">
-    <h1>{{ message }}</h1>
+    <h3>{{ message }}</h3>
     <GetTodo></GetTodo>
     <CompletedTodo></CompletedTodo>
     <CurrentTodo></CurrentTodo>
@@ -30,8 +30,9 @@
 
 <style lang="scss" scoped>
   #app {
-    h1 {
-      color: teal;
+    h3 {
+      color: #025aa5;
+      text-align: center;
     }
   }
 </style>
