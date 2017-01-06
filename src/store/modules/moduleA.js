@@ -1,14 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
-  // initial app store data
+const moduleA = {
   state: {
     todos: [],
     newTodo: '',
-    message: 'Vue App using Vuex'
+    message: 'Hi'
   },
   mutations: {
     GET_TODO(state, todo) {
@@ -38,7 +33,6 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    // these are using destructuring
     getTodo({commit}, todo) {
       commit('GET_TODO', todo)
     },
@@ -68,4 +62,6 @@ export default new Vuex.Store({
     }),
     message: state => state.message
   }
-})
+}
+
+export default moduleA;
