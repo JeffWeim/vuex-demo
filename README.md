@@ -1,6 +1,6 @@
 # vuex-tutorial
 
-> A Vue.js project
+> A purely experimental Vuex demonstration 
 
 ## Build Setup
 

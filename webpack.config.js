@@ -1,6 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
 
+const dbUrl = process.env.NODE_ENV === 'production'
+  ? '/'
+  : 'http://localhost:3000'
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -51,12 +55,13 @@ module.exports = {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
+  module.exports.devtool = '#cheap-source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
+        NODE_ENV: '"production"',
+        DB_URL: dbUrl
       }
     }),
     new webpack.optimize.UglifyJsPlugin({

@@ -1,7 +1,7 @@
 <template>
-  <div id="get-todo" class="container">
+  <div id="get-todo" >
     <input class="form-control" :value="newTodo" @change="getTodo" placeholder="I need to...">
-    <button class="btn btn-primary" @click.prevent="addTodo"> Add Todo </button>
+    <button class="btn btn-primary" @click.prevent="addTodo"> Add </button>
   </div>  
 </template>
 
